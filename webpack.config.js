@@ -13,8 +13,9 @@ module.exports = {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
             { test: /\.scss$/, loaders: ["style", "css", "sass"]},
-            { test: /\.handlebars$/, loader: "handlebars-loader" },
-            { test: /\.json$/, loader: "json" }
+            { test: /\.handlebars$/, loader: "handlebars", query: { inlineRequires: '\/media\/' }},
+            { test: /\.json$/, loader: "json" },
+            { test: /\.(png|jpg)$/, loader: 'url?limit=8192' },
         ]
     }
 };

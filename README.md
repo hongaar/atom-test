@@ -1,3 +1,3 @@
 # Atom test
 
-Test project in Atom.
+Test project in Atom with Gulp and Webpack.
