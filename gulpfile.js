@@ -3,6 +3,7 @@ var gutil = require("gulp-util");
 var webpack = require("webpack");
 var WebpackDevServer = require("webpack-dev-server");
 var webpackConfig = require("./webpack.config.js");
+var UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 
 // The development server (the recommended option for development)
 gulp.task("default", ["webpack-dev-server"]);
@@ -21,6 +22,9 @@ gulp.task("build", ["webpack:build"]);
 gulp.task("webpack:build", function(callback) {
 	// modify some webpack config options
 	var myConfig = Object.create(webpackConfig);
+
+  // Add UglifyJs plugin
+  myConfig.plugins.push(new UglifyJsPlugin());
 
 	// run webpack
 	webpack(myConfig, function(err, stats) {

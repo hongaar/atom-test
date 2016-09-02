@@ -1,9 +1,9 @@
 [{
   "title": "My New Post",
   "body": "This is my first post!",
-  "image": "/media/photos/2.jpg"
+  "image": "photos/1.jpg"
 }, {
   "title": "Another Post",
   "body": "This is my second post!",
-  "image": "/media/photos/2.jpg"
+  "image": "photos/2.jpg"
 }]
