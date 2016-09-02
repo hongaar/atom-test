@@ -1,0 +1,10 @@
+@import 'partials/variables';
+
+.nabble__blog {
+  background-color: lighten($secondary, 20%);
+  padding: $spacing;
+
+  &__item {
+    border-bottom: 1px solid $secondary;
+  }
+}
